@@ -14,8 +14,8 @@ class UploadApiClientConfiguration implements ConfigurationInterface
         $treeBuilder
             ->getRootNode()
                 ->children()
-                    ->scalarNode('base_url')->defaultValue('%env(str:UPLOAD_API_CLIENT_BASE_URL)%')->end()
-                    ->scalarNode('authorization_token')->defaultValue('%env(str:UPLOAD_API_CLIENT_AUTH_TOKEN)%')->end()
+                    ->scalarNode('base_url')->defaultValue('%env(string:UPLOAD_API_CLIENT_BASE_URL)%')->end()
+                    ->scalarNode('authorization_token')->defaultValue('%env(string:UPLOAD_API_CLIENT_AUTH_TOKEN)%')->end()
                     ->booleanNode('ssl_verify')->defaultValue('%env(bool:UPLOAD_API_CLIENT_SSL_VERIFY)%')->end()
                 ->end()
         ;
